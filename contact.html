@@ -1,0 +1,2323 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="classic">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranojoy Dutta - Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        /* Theme Variables */
+        html[data-theme="classic"] {
+            --text-color: #000000;
+            --bg-color: #ffffff;
+            --accent-bg: #f0f0f0;
+            --border-color: #000000;
+            --hover-bg: #000000;
+            --hover-text: #ffffff;
+            --heading-color: #000000;
+            --console-glow: rgba(0, 0, 0, 0.2);
+            --bg-dots-color: rgba(0, 0, 0, 0.1);
+            --bg-star-color: rgba(0, 0, 0, 0.15);
+        }
+
+        html[data-theme="gameboy"] {
+            --text-color: #0f380f;
+            --bg-color: #9bbc0f;
+            --accent-bg: #8bac0f;
+            --border-color: #0f380f;
+            --hover-bg: #0f380f;
+            --hover-text: #9bbc0f;
+            --heading-color: #0f380f;
+            --console-glow: rgba(15, 56, 15, 0.3);
+            --bg-dots-color: rgba(15, 56, 15, 0.15);
+            --bg-star-color: rgba(15, 56, 15, 0.2);
+        }
+
+        html[data-theme="terminal"] {
+            --text-color: #33ff33;
+            --bg-color: #000000;
+            --accent-bg: #0a0a0a;
+            --border-color: #33ff33;
+            --hover-bg: #33ff33;
+            --hover-text: #000000;
+            --heading-color: #33ff33;
+            --console-glow: rgba(51, 255, 51, 0.3);
+            --bg-dots-color: rgba(51, 255, 51, 0.15);
+            --bg-star-color: rgba(51, 255, 51, 0.2);
+        }
+
+        html[data-theme="commodore"] {
+            --text-color: #a0a0ff;
+            --bg-color: #4040c0;
+            --accent-bg: #5050d0;
+            --border-color: #a0a0ff;
+            --hover-bg: #a0a0ff;
+            --hover-text: #4040c0;
+            --heading-color: #ffffff;
+            --console-glow: rgba(160, 160, 255, 0.4);
+            --bg-dots-color: rgba(255, 255, 255, 0.2);
+            --bg-star-color: rgba(255, 255, 255, 0.3);
+        }
+
+        html[data-theme="modern"] {
+            --text-color: #2c3e50;
+            --bg-color: #f8f9fa;
+            --accent-bg: #e9ecef;
+            --border-color: #6c757d;
+            --hover-bg: #2c3e50;
+            --hover-text: #ffffff;
+            --heading-color: #2c3e50;
+            --console-glow: rgba(44, 62, 80, 0.2);
+            --bg-dots-color: rgba(44, 62, 80, 0.1);
+            --bg-star-color: rgba(44, 62, 80, 0.15);
+        }
+
+        html[data-theme="cyberpunk"] {
+            --text-color: #00ff9f;
+            --bg-color: #1a1a2e;
+            --accent-bg: #16213e;
+            --border-color: #00ff9f;
+            --hover-bg: #00ff9f;
+            --hover-text: #1a1a2e;
+            --heading-color: #00ff9f;
+            --console-glow: rgba(0, 255, 159, 0.4);
+            --bg-dots-color: rgba(0, 255, 159, 0.15);
+            --bg-star-color: rgba(0, 255, 159, 0.2);
+        }
+
+        html[data-theme="retro-future"] {
+            --text-color: #ff6b6b;
+            --bg-color: #f7f7f7;
+            --accent-bg: #ffe66d;
+            --border-color: #ff6b6b;
+            --hover-bg: #ff6b6b;
+            --hover-text: #ffffff;
+            --heading-color: #ff6b6b;
+            --console-glow: rgba(255, 107, 107, 0.3);
+            --bg-dots-color: rgba(255, 107, 107, 0.1);
+            --bg-star-color: rgba(255, 107, 107, 0.15);
+        }
+
+        html[data-theme="minimal-dark"] {
+            --text-color: #e0e0e0;
+            --bg-color: #121212;
+            --accent-bg: #1e1e1e;
+            --border-color: #e0e0e0;
+            --hover-bg: #e0e0e0;
+            --hover-text: #121212;
+            --heading-color: #ffffff;
+            --console-glow: rgba(224, 224, 224, 0.3);
+            --bg-dots-color: rgba(224, 224, 224, 0.1);
+            --bg-star-color: rgba(224, 224, 224, 0.15);
+        }
+
+        html[data-theme="neon"] {
+            --text-color: #f72585;
+            --bg-color: #10002b;
+            --accent-bg: #240046;
+            --border-color: #4cc9f0;
+            --hover-bg: #4cc9f0;
+            --hover-text: #10002b;
+            --heading-color: #4361ee;
+            --console-glow: rgba(76, 201, 240, 0.4);
+            --bg-dots-color: rgba(247, 37, 133, 0.15);
+            --bg-star-color: rgba(67, 97, 238, 0.2);
+        }
+        
+        /* New Galaxy Theme */
+        html[data-theme="galaxy"] {
+            --text-color: #e0f7fa;
+            --bg-color: #0a0a20;
+            --accent-bg: #161632;
+            --border-color: #5d89f8;
+            --hover-bg: #5d89f8;
+            --hover-text: #0a0a20;
+            --heading-color: #64ffda;
+            --console-glow: rgba(93, 137, 248, 0.4);
+            --bg-dots-color: rgba(102, 187, 255, 0.25);
+            --bg-star-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Scroll Animation Style */
+        .scroll-animation-container {
+            position: fixed;
+            top: 90%;
+            left: 90%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            z-index: 1001;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .animation-toggle {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            width: 34px;
+            height: 34px;
+            background: var(--accent-bg);
+            border: 2px solid var(--border-color);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1002;
+            border-radius: 4px;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .animation-toggle:hover {
+            opacity: 1;
+            background: var(--hover-bg);
+            color: var(--hover-text);
+        }
+
+        .animation-toggle.disabled {
+            opacity: 0.5;
+            background: var(--accent-bg);
+            color: var(--border-color);
+        }
+
+        .animation-toggle.disabled::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 24px;
+            background: var(--border-color);
+            transform: rotate(45deg);
+        }
+
+        .retro-icon {
+            width: 100%;
+            height: 100%;
+            background-color: var(--heading-color);
+            clip-path: polygon(
+                25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%
+            );
+            position: relative;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .retro-icon::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            width: 60%;
+            height: 60%;
+            background-color: var(--bg-color);
+            clip-path: polygon(
+                25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%
+            );
+        }
+
+        .pixel-fragment {
+            position: absolute;
+            background-color: var(--heading-color);
+            width: 10px;
+            height: 10px;
+            opacity: 0;
+        }
+
+        .mini-pacman {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: transparent;
+            opacity: 0;
+        }
+
+        .mini-pacman::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: var(--text-color);
+            clip-path: polygon(100% 0, 40% 50%, 100% 100%, 0 100%, 0 0);
+            animation: eatMiniPacman 0.3s linear infinite alternate;
+        }
+
+        @keyframes eatMiniPacman {
+            0% { clip-path: polygon(100% 0, 40% 50%, 100% 100%, 0 100%, 0 0); }
+            100% { clip-path: polygon(100% 15%, 100% 85%, 100% 85%, 0 85%, 0 15%); }
+        }
+
+        .section-indicator {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Silkscreen', cursive;
+            color: var(--heading-color);
+            font-size: 20px;
+            text-shadow: 2px 2px 0 var(--border-color);
+        }
+
+        /* Icon variations for different sections */
+        .retro-icon[data-section="HOME"] {
+            clip-path: polygon(
+                25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%
+            );
+        }
+
+        .retro-icon[data-section="ABOUT"] {
+            clip-path: polygon(
+                50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%
+            );
+        }
+
+        .retro-icon[data-section="CONTACT"] {
+            clip-path: circle(50% at 50% 50%);
+        }
+
+        .retro-icon[data-section="FORM"] {
+            clip-path: polygon(
+                0% 25%, 25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%
+            );
+        }
+
+        .retro-icon[data-section="SOCIALS"] {
+            clip-path: polygon(
+                50% 0%, 100% 50%, 50% 100%, 0% 50%
+            );
+        }
+
+        /* Mobile responsiveness for scroll animation */
+        @media (max-width: 768px) {
+            .scroll-animation-container {
+                width: 80px;
+                height: 80px;
+                top: 85%;
+                left: 85%;
+            }
+
+            .pixel-fragment {
+                width: 8px;
+                height: 8px;
+            }
+
+            .section-indicator {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .scroll-animation-container {
+                width: 60px;
+                height: 60px;
+                top: 80%;
+                left: 80%;
+            }
+
+            .pixel-fragment {
+                width: 6px;
+                height: 6px;
+            }
+
+            .section-indicator {
+                font-size: 14px;
+            }
+        }
+
+        /* Coffee Theme */
+        /* html[data-theme="coffee"] {
+            --text-color: #4e342e;
+            --bg-color: #efebe9;
+            --accent-bg: #d7ccc8;
+            --border-color: #795548;
+            --hover-bg: #795548;
+            --hover-text: #efebe9;
+            --heading-color: #5d4037;
+            --console-glow: rgba(121, 85, 72, 0.3);
+            --bg-dots-color: rgba(121, 85, 72, 0.1);
+            --bg-star-color: rgba(62, 39, 35, 0.15);
+        } */
+        
+        /* Sunset Theme */
+        /* html[data-theme="sunset"] {
+            --text-color: #bf360c;
+            --bg-color: #fff8e1;
+            --accent-bg: #ffecb3;
+            --border-color: #ff9800;
+            --hover-bg: #ff9800;
+            --hover-text: #fff8e1;
+            --heading-color: #e65100;
+            --console-glow: rgba(255, 152, 0, 0.3);
+            --bg-dots-color: rgba(255, 152, 0, 0.1);
+            --bg-star-color: rgba(191, 54, 12, 0.15);
+        } */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'VT323', monospace;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--bg-color);
+            font-size: 18px;
+            letter-spacing: 0.02em;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1, h2, h3, .theme-btn, .theme-option {
+            font-family: 'Silkscreen', cursive;
+            letter-spacing: 0.05em;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .game-container {
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Retro background elements */
+        .retro-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(1px at 25% 25%, var(--bg-star-color) 100%, transparent 100%),
+                radial-gradient(1.5px at 75% 45%, var(--bg-star-color) 100%, transparent 100%),
+                radial-gradient(2px at 35% 65%, var(--bg-star-color) 100%, transparent 100%),
+                radial-gradient(2.5px at 65% 85%, var(--bg-star-color) 100%, transparent 100%),
+                radial-gradient(1.5px at 85% 15%, var(--bg-star-color) 100%, transparent 100%),
+                radial-gradient(1px at 15% 35%, var(--bg-star-color) 100%, transparent 100%),
+                radial-gradient(2px at 45% 95%, var(--bg-star-color) 100%, transparent 100%),
+                radial-gradient(3px at 95% 55%, var(--bg-star-color) 100%, transparent 100%);
+            opacity: 0.8;
+            animation: twinkle 8s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .pacman {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: transparent;
+            opacity: 0.7;
+            animation: movePacman 40s linear infinite;
+        }
+
+        .pacman::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: var(--text-color);
+            clip-path: polygon(100% 0, 40% 50%, 100% 100%, 0 100%, 0 0);
+            animation: eatAnimation 0.4s linear infinite alternate;
+        }
+
+        .pacman-2 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: transparent;
+            opacity: 0.5;
+            animation: movePacman2 35s linear infinite;
+        }
+
+        .pacman-2::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: var(--heading-color);
+            clip-path: polygon(100% 0, 40% 50%, 100% 100%, 0 100%, 0 0);
+            animation: eatAnimation 0.3s linear infinite alternate;
+        }
+
+        .pacman-3 {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: transparent;
+            opacity: 0.6;
+            animation: movePacman3 50s linear infinite;
+        }
+
+        .pacman-3::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: var(--border-color);
+            clip-path: polygon(100% 0, 40% 50%, 100% 100%, 0 100%, 0 0);
+            animation: eatAnimation 0.5s linear infinite alternate;
+        }
+
+        @keyframes eatAnimation {
+            0% { clip-path: polygon(100% 0, 40% 50%, 100% 100%, 0 100%, 0 0); }
+            100% { clip-path: polygon(100% 15%, 100% 85%, 100% 85%, 0 85%, 0 15%); }
+        }
+
+        @keyframes movePacman {
+            0% { top: -30px; left: -30px; }
+            25% { top: 30%; left: 105%; }
+            50% { top: 75%; left: -30px; }
+            75% { top: 50%; left: 105%; }
+            100% { top: -30px; left: -30px; }
+        }
+
+        @keyframes movePacman2 {
+            0% { top: 80%; left: -20px; }
+            25% { top: -20px; left: 30%; }
+            50% { top: 60%; left: 105%; }
+            75% { top: 20%; left: -20px; }
+            100% { top: 80%; left: -20px; }
+        }
+
+        @keyframes movePacman3 {
+            0% { top: 40%; left: 105%; }
+            25% { top: 10%; left: -40px; }
+            50% { top: 90%; left: 70%; }
+            75% { top: 30%; left: 105%; }
+            100% { top: 40%; left: 105%; }
+        }
+
+        .dots {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+            background-size: 40px 40px;
+            background-image: 
+                radial-gradient(var(--bg-dots-color) 3px, transparent 0),
+                radial-gradient(var(--bg-dots-color) 3px, transparent 0);
+            background-position: 0 0, 20px 20px;
+            animation: moveGrid 30s infinite linear;
+        }
+
+        @keyframes moveGrid {
+            0% { background-position: 0 0, 20px 20px; }
+            100% { background-position: 500px 500px, 520px 520px; }
+        }
+
+        .wave {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 20px,
+                var(--bg-dots-color) 20px,
+                var(--bg-dots-color) 21px
+            );
+            opacity: 0.2;
+            animation: waveAnimation 10s infinite linear;
+        }
+
+        @keyframes waveAnimation {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100px); }
+        }
+
+        .pixel-dots {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.05;
+            background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+            background-size: 15px 15px;
+            animation: scan 10s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(20px); }
+        }
+
+        .pixel-character {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 32px;
+            height: 32px;
+            background: var(--text-color);
+            clip-path: polygon(
+                25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%
+            );
+            animation: float 2s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .theme-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .theme-btn {
+            font-size: 0.8rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent-bg);
+            border: 2px solid var(--border-color);
+            color: var(--text-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .theme-btn::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            right: -4px;
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            border: 2px solid var(--border-color);
+            opacity: 0.5;
+            z-index: -1;
+            transition: all 0.3s ease;
+        }
+
+        .theme-btn:hover {
+            background: var(--hover-bg);
+            color: var(--hover-text);
+        }
+
+        .theme-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--accent-bg);
+            border: 2px solid var(--border-color);
+            padding: 0.5rem;
+            display: none;
+            flex-direction: column;
+            gap: 0.5rem;
+            max-height: 300px;
+            overflow-y: auto;
+            width: 180px;
+            margin-top: 5px;
+            box-shadow: 0 5px 15px var(--console-glow);
+            z-index: 1001;
+        }
+
+        .theme-menu.active {
+            display: flex;
+        }
+
+        .theme-option {
+            font-size: 0.8rem;
+            padding: 0.5rem;
+            background: var(--bg-color);
+            border: 2px solid var(--border-color);
+            color: var(--text-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .theme-option:hover {
+            background: var(--hover-bg);
+            color: var(--hover-text);
+            transform: translateX(5px);
+        }
+        
+        /* Mobile adjustments for theme switcher */
+        @media (max-width: 768px) {
+            .theme-switcher {
+                top: 15px;
+                right: 15px;
+            }
+            
+            .theme-btn {
+                width: 36px;
+                height: 36px;
+            }
+            
+            .theme-btn i {
+                font-size: 16px;
+            }
+            
+            .theme-menu {
+                width: 120px;
+                top: 45px;
+            }
+            
+            .theme-option {
+                padding: 6px 10px;
+                font-size: 13px;
+            }
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100vh;
+            background: var(--accent-bg);
+            border-right: 4px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 1500;
+            padding: 5rem 1rem 1rem;
+            transition: left 0.3s ease;
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+
+        .nav-menu.open {
+            left: 0;
+        }
+
+        .nav-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-bg);
+            border: 3px solid var(--border-color);
+            z-index: 2000;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggle:hover {
+            background: var(--hover-bg);
+        }
+
+        .nav-toggle:hover .pacman-icon::before {
+            background-color: var(--hover-text);
+        }
+
+        .nav-toggle.active {
+            left: 250px;
+        }
+
+        .pacman-icon {
+            position: relative;
+            width: 24px;
+            height: 24px;
+        }
+
+        .pacman-icon::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: var(--text-color);
+            clip-path: polygon(100% 0, 40% 50%, 100% 100%, 0 100%, 0 0);
+            animation: navPacman 0.4s linear infinite alternate;
+            transition: background-color 0.3s ease;
+        }
+
+        @keyframes navPacman {
+            0% { clip-path: polygon(100% 0, 40% 50%, 100% 100%, 0 100%, 0 0); }
+            100% { clip-path: polygon(100% 15%, 100% 85%, 100% 85%, 0 85%, 0 15%); }
+        }
+
+        .nav-item {
+            font-size: 0.9rem;
+            padding: 0.8rem 1rem;
+            background: var(--bg-color);
+            border: 2px solid var(--border-color);
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transition: left 0.7s ease;
+        }
+
+        .nav-item:hover::before {
+            left: 100%;
+        }
+
+        .nav-item:hover {
+            background: var(--hover-bg);
+            color: var(--hover-text);
+            transform: translateY(-2px);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1400;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .page-container {
+            padding-top: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            color: var(--heading-color);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--border-color);
+        }
+
+        .game-console {
+            background: var(--accent-bg);
+            border: 8px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            position: relative;
+            box-shadow: 
+                0 0 20px var(--console-glow),
+                inset 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-console::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 20px;
+            background: var(--border-color);
+            border-radius: 10px 10px 0 0;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .game-console::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 20px;
+            background: var(--border-color);
+            border-radius: 0 0 10px 10px;
+            box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .console-screen {
+            background: var(--bg-color);
+            border: 4px solid var(--border-color);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            min-height: 300px;
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .screen-scanline {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                transparent,
+                transparent 50%,
+                rgba(0, 0, 0, 0.05) 50%,
+                rgba(0, 0, 0, 0.05)
+            );
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.3;
+        }
+
+        .screen-glare {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.05) 0%, 
+                transparent 40%, 
+                transparent 100%
+            );
+            pointer-events: none;
+        }
+
+        .console-controls {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .console-button {
+            width: 40px;
+            height: 40px;
+            background: var(--border-color);
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .console-button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background: var(--accent-bg);
+            border-radius: 50%;
+            box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .console-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        .loading-title {
+            font-size: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 4px 4px 0 var(--border-color);
+            animation: blink 1s infinite;
+        }
+
+        .loading-subtitle {
+            font-size: 1rem;
+            color: var(--text-color);
+            text-align: center;
+            margin-top: 1rem;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .loading-dots {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .loading-dot {
+            width: 20px;
+            height: 20px;
+            background: var(--text-color);
+            border-radius: 50%;
+            animation: bounce 1s infinite;
+        }
+
+        .loading-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .loading-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.2rem;
+            background: var(--bg-color);
+            border: 3px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .contact-method:hover {
+            border-color: var(--heading-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-method i {
+            font-size: 1.8rem;
+            color: var(--heading-color);
+            margin-top: 0.2rem;
+        }
+
+        .contact-info h4 {
+            font-family: 'Silkscreen', cursive;
+            font-size: 1.2rem;
+            margin: 0 0 0.5rem 0;
+            color: var(--heading-color);
+        }
+
+        .contact-info p, .contact-info a {
+            font-family: 'VT323', monospace;
+            font-size: 1.1rem;
+            margin: 0;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .contact-method::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            right: -6px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--border-color);
+            opacity: 0.5;
+            z-index: -1;
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover::after {
+            transform: translate(3px, 3px);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--accent-bg);
+            border: 4px solid var(--border-color);
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px var(--console-glow);
+        }
+
+        .contact-form::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: -8px;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            border: 4px solid var(--border-color);
+            opacity: 0.5;
+            z-index: -1;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 0 0 20px var(--console-glow);
+        }
+
+        .contact-form:hover::after {
+            transform: translate(4px, 4px);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: 'Silkscreen', cursive;
+            color: var(--heading-color);
+            text-shadow: 0 0 5px var(--console-glow);
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--bg-color);
+            border: 2px solid var(--border-color);
+            color: var(--text-color);
+            font-family: 'VT323', monospace;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--heading-color);
+            box-shadow: 0 0 10px var(--console-glow);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            padding: 0.8rem 1.5rem;
+            background: var(--bg-color);
+            border: 3px solid var(--border-color);
+            color: var(--text-color);
+            font-family: 'Silkscreen', cursive;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn:hover {
+            background: var(--hover-bg);
+            color: var(--hover-text);
+            transform: translateY(-2px);
+            box-shadow: 0 0 10px var(--console-glow);
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .contact-item {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--heading-color);
+            text-shadow: 0 0 5px var(--console-glow);
+        }
+
+        @media (max-width: 768px) {
+            .page-container {
+                padding-top: 6rem;
+            }
+
+            .nav-menu {
+                width: 80%;
+                left: -80%;
+            }
+
+            .theme-switcher {
+                top: 20px;
+                right: 20px;
+            }
+
+            .theme-menu {
+                width: 120px;
+                max-height: 300px;
+            }
+
+            .section-container {
+                padding: 1rem;
+            }
+
+            .contact-methods {
+                flex-direction: column;
+            }
+
+            .contact-card {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .form-group {
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .theme-btn, .nav-toggle {
+                width: 36px;
+                height: 36px;
+                font-size: 0.7rem;
+                padding: 0.5rem;
+            }
+
+            .theme-option {
+                font-size: 12px;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .nav-item {
+                font-size: 0.8rem;
+                padding: 0.6rem 0.8rem;
+            }
+
+            .contact-form {
+                padding: 1rem;
+            }
+
+            .contact-card {
+                padding: 1rem;
+            }
+            
+            .contact-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .form-group input,
+            .form-group textarea {
+                padding: 0.6rem;
+            }
+            
+            .submit-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        :root {
+            /* Light Theme (Default) */
+            --bg-color: #f8f9fa;
+            --text-color: #212529;
+            --accent-color: #0d6efd;
+            --secondary-bg: #e9ecef;
+            --border-color: #dee2e6;
+            --hover-color: #0b5ed7;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --form-bg: #ffffff;
+        }
+
+        /* Dark Theme */
+        [data-theme="dark"] {
+            --bg-color: #212529;
+            --text-color: #f8f9fa;
+            --accent-color: #0d6efd;
+            --secondary-bg: #343a40;
+            --border-color: #495057;
+            --hover-color: #0b5ed7;
+            --shadow-color: rgba(255, 255, 255, 0.1);
+            --form-bg: #2c3034;
+        }
+
+        /* Blue Theme */
+        [data-theme="blue"] {
+            --bg-color: #e7f5ff;
+            --text-color: #0c326f;
+            --accent-color: #1864ab;
+            --secondary-bg: #d0ebff;
+            --border-color: #90c2ff;
+            --hover-color: #1c7ed6;
+            --shadow-color: rgba(0, 123, 255, 0.2);
+            --form-bg: #f1f8ff;
+        }
+
+        /* Green Theme */
+        [data-theme="green"] {
+            --bg-color: #e6f7e9;
+            --text-color: #0b4419;
+            --accent-color: #2b8a3e;
+            --secondary-bg: #d3f9d8;
+            --border-color: #8ce99a;
+            --hover-color: #37b24d;
+            --shadow-color: rgba(40, 167, 69, 0.2);
+            --form-bg: #f1f9f2;
+        }
+
+        /* Galaxy theme special elements */
+        .galaxy-stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(2px at 20% 30%, #ffffff 100%, transparent 100%),
+                            radial-gradient(1px at 40% 70%, #ffffff 100%, transparent 100%),
+                            radial-gradient(1.5px at 60% 20%, #64ffda 100%, transparent 100%),
+                            radial-gradient(1px at 70% 90%, #ffffff 100%, transparent 100%),
+                            radial-gradient(2px at 90% 10%, #5d89f8 100%, transparent 100%),
+                            radial-gradient(1px at 10% 50%, #ffffff 100%, transparent 100%),
+                            radial-gradient(1.5px at 30% 80%, #64ffda 100%, transparent 100%),
+                            radial-gradient(1px at 50% 5%, #ffffff 100%, transparent 100%),
+                            radial-gradient(2px at 80% 40%, #5d89f8 100%, transparent 100%),
+                            radial-gradient(1.5px at 95% 60%, #ffffff 100%, transparent 100%),
+                            radial-gradient(2px at 15% 75%, #64ffda 100%, transparent 100%),
+                            radial-gradient(1px at 35% 15%, #ffffff 100%, transparent 100%),
+                            radial-gradient(1.5px at 65% 65%, #5d89f8 100%, transparent 100%),
+                            radial-gradient(2px at 85% 25%, #ffffff 100%, transparent 100%),
+                            radial-gradient(1px at 5% 85%, #64ffda 100%, transparent 100%);
+            opacity: 0;
+            z-index: 1;
+            animation: twinkle 8s infinite alternate;
+            transition: opacity 0.5s ease;
+        }
+
+        html[data-theme="galaxy"] .galaxy-stars {
+            opacity: 1;
+        }
+        
+        .galaxy-nebula {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(ellipse at 20% 40%, rgba(93, 137, 248, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 70%, rgba(100, 255, 218, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 40% 10%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+                radial-gradient(ellipse at 90% 20%, rgba(93, 137, 248, 0.15) 0%, transparent 40%);
+            opacity: 0;
+            z-index: 1;
+            filter: blur(8px);
+            transition: opacity 0.5s ease;
+        }
+        
+        html[data-theme="galaxy"] .galaxy-nebula {
+            opacity: 1;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.4; }
+            50% { opacity: 0.7; }
+            100% { opacity: 0.5; }
+        }
+
+        .shooting-star {
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #ffffff, transparent);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .shooting-star-1 {
+            top: 20%;
+            left: -100px;
+            transform: rotate(15deg);
+            animation: shootingStar 8s linear infinite;
+            animation-delay: 1s;
+        }
+
+        .shooting-star-2 {
+            top: 60%;
+            left: -100px;
+            transform: rotate(-10deg);
+            animation: shootingStar 12s linear infinite;
+            animation-delay: 5s;
+        }
+
+        @keyframes shootingStar {
+            0% {
+                transform: translateX(0) rotate(15deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            20% {
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(calc(100vw + 200px)) rotate(15deg);
+                opacity: 0;
+            }
+        }
+
+        html[data-theme="galaxy"] .shooting-star {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="loading-screen">
+            <h1 class="loading-title">PRESS START</h1>
+            <div class="loading-dots">
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+            </div>
+            <p class="loading-subtitle">Loading Contact...</p>
+        </div>
+        
+        <div class="retro-background">
+            <div class="bg-stars"></div>
+            <div class="dots"></div>
+            <div class="wave"></div>
+            <div class="pacman"></div>
+            <div class="pacman-2"></div>
+            <div class="pacman-3"></div>
+            <div class="galaxy-stars"></div>
+            <div class="galaxy-nebula"></div>
+            <div class="shooting-star shooting-star-1"></div>
+            <div class="shooting-star shooting-star-2"></div>
+        </div>
+        
+        <div class="pixel-dots"></div>
+        <div class="pixel-character"></div>
+        
+        <div class="theme-switcher">
+            <button class="theme-btn" aria-label="Change Theme"><i class="fas fa-palette"></i></button>
+            <div class="theme-menu">
+                <button class="theme-option" data-theme="classic">CLASSIC</button>
+                <button class="theme-option" data-theme="gameboy">GAMEBOY</button>
+                <button class="theme-option" data-theme="terminal">TERMINAL</button>
+                <button class="theme-option" data-theme="cyberpunk">CYBERPUNK</button>
+                <button class="theme-option" data-theme="retro-future">RETRO FUTURE</button>
+                <button class="theme-option" data-theme="minimal-dark">MINIMAL DARK</button>
+                <button class="theme-option" data-theme="arcade">ARCADE</button>
+                <button class="theme-option" data-theme="space-invader">SPACE INVADER</button>
+                <button class="theme-option" data-theme="neon">NEON</button>
+                <button class="theme-option" data-theme="galaxy">GALAXY</button>
+            </div>
+        </div>
+
+        <div class="nav-toggle" aria-label="Toggle Navigation">
+            <div class="pacman-icon"></div>
+        </div>
+
+        <div class="overlay"></div>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-item">[ HOME ]</a>
+            <a href="experience.html" class="nav-item">[ EXPERIENCE ]</a>
+            <a href="projects.html" class="nav-item">[ PROJECTS ]</a>
+            <a href="contact.html" class="nav-item">[ CONTACT ]</a>
+        </nav>
+
+        <div class="scroll-animation-container">
+            <div class="retro-icon"></div>
+            <div class="section-indicator"></div>
+            <!-- Pixel fragments will be dynamically generated -->
+        </div>
+
+        <button class="animation-toggle" aria-label="Toggle scroll animation">
+            <i class="fas fa-magic"></i>
+        </button>
+
+        <div class="page-container">
+            <div class="section-container">
+                <h1 class="section-title">Contact</h1>
+                <div class="game-console">
+                    <div class="console-screen">
+                        <div class="screen-glare"></div>
+                        <div class="screen-scanline"></div>
+                        
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label class="form-label" for="name">Name</label>
+                                <input type="text" id="name" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email</label>
+                                <input type="email" id="email" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="message">Message</label>
+                                <textarea id="message" class="form-textarea" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">SEND MESSAGE</button>
+                        </form>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:duttaranojoy241@gmail.com">duttaranojoy241@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://linkedin.com/in/ranojoy-dutta" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/thepoetfrommars" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Theme switching functionality
+            const themeBtn = document.querySelector('.theme-btn');
+            const themeMenu = document.querySelector('.theme-menu');
+            const themeBtns = document.querySelectorAll('.theme-option');
+            const html = document.documentElement;
+            const loadingScreen = document.querySelector('.loading-screen');
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const overlay = document.querySelector('.overlay');
+            const formElements = document.querySelectorAll('.form-group');
+
+            // Load saved theme
+            const savedTheme = localStorage.getItem('theme') || 'classic';
+            html.setAttribute('data-theme', savedTheme);
+            
+            // Theme button click handler
+            themeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                themeMenu.classList.toggle('active');
+            });
+
+            // Close theme menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!themeMenu.contains(e.target) && !themeBtn.contains(e.target)) {
+                    themeMenu.classList.remove('active');
+                }
+            });
+
+            // Theme option click handlers
+            themeBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const theme = btn.getAttribute('data-theme');
+                    html.setAttribute('data-theme', theme);
+                    localStorage.setItem('theme', theme);
+                    themeMenu.classList.remove('active');
+                    
+                    // Create theme change animation
+                    createThemeChangeAnimation();
+                });
+            });
+
+            // Navigation toggle functionality
+            navToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navToggle.classList.toggle('active');
+                navMenu.classList.toggle('open');
+                overlay.classList.toggle('active');
+                
+                // Animate nav menu items when opened
+                if (navMenu.classList.contains('open')) {
+                    anime({
+                        targets: '.nav-item',
+                        translateX: [-50, 0],
+                        opacity: [0, 1],
+                        delay: anime.stagger(100),
+                        duration: 800,
+                        easing: 'easeOutExpo'
+                    });
+                }
+            });
+
+            // Close menu when clicking on overlay
+            overlay.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('open');
+                overlay.classList.remove('active');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('open');
+                    overlay.classList.remove('active');
+                }
+            });
+
+            // Nav item hover effect
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    anime({
+                        targets: this,
+                        translateY: -5,
+                        scale: 1.05,
+                        duration: 300,
+                        easing: 'easeOutElastic(1, .8)'
+                    });
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    anime({
+                        targets: this,
+                        translateY: 0,
+                        scale: 1,
+                        duration: 300,
+                        easing: 'easeOutElastic(1, .8)'
+                    });
+                });
+                
+                // Close menu when clicking on a nav item
+                item.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('open');
+                    overlay.classList.remove('active');
+                });
+            });
+
+            // Handle loading screen
+            const showLoadingScreen = () => {
+                loadingScreen.style.display = 'flex';
+                loadingScreen.style.opacity = '1';
+                setTimeout(() => {
+                    loadingScreen.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                    }, 1000);
+                }, 2000);
+            };
+
+            // Check if this is a refresh or direct navigation
+            const isRefresh = performance.navigation.type === 1;
+            const isDirectNavigation = !document.referrer.includes(window.location.hostname);
+
+            if (isRefresh || isDirectNavigation) {
+                showLoadingScreen();
+                sessionStorage.setItem('hasLoaded', 'true');
+            } else {
+                loadingScreen.style.display = 'none';
+            }
+            
+            // Section title animation
+            anime({
+                targets: '.section-title',
+                opacity: [0, 1],
+                translateY: [-30, 0],
+                easing: 'easeOutExpo',
+                duration: 1000,
+                delay: 300
+            });
+            
+            // Add text scramble effect to section title
+            class TextScramble {
+                constructor(el) {
+                    this.el = el;
+                    this.chars = '!<>-_\\/[]{}—=+*^?#________';
+                    this.update = this.update.bind(this);
+                }
+                setText(newText) {
+                    const oldText = this.el.innerText;
+                    const length = Math.max(oldText.length, newText.length);
+                    const promise = new Promise((resolve) => this.resolve = resolve);
+                    this.queue = [];
+                    for (let i = 0; i < length; i++) {
+                        const from = oldText[i] || '';
+                        const to = newText[i] || '';
+                        const start = Math.floor(Math.random() * 40);
+                        const end = start + Math.floor(Math.random() * 40);
+                        this.queue.push({ from, to, start, end });
+                    }
+                    cancelAnimationFrame(this.frameRequest);
+                    this.frame = 0;
+                    this.update();
+                    return promise;
+                }
+                update() {
+                    let output = '';
+                    let complete = 0;
+                    for (let i = 0, n = this.queue.length; i < n; i++) {
+                        let { from, to, start, end, char } = this.queue[i];
+                        if (this.frame >= end) {
+                            complete++;
+                            output += to;
+                        } else if (this.frame >= start) {
+                            if (!char || Math.random() < 0.28) {
+                                char = this.randomChar();
+                                this.queue[i].char = char;
+                            }
+                            output += `<span class="dud">${char}</span>`;
+                        } else {
+                            output += from;
+                        }
+                    }
+                    this.el.innerHTML = output;
+                    if (complete === this.queue.length) {
+                        this.resolve();
+                    } else {
+                        this.frameRequest = requestAnimationFrame(this.update);
+                        this.frame++;
+                    }
+                }
+                randomChar() {
+                    return this.chars[Math.floor(Math.random() * this.chars.length)];
+                }
+            }
+            
+            // Apply text scramble effect on section titles
+            const title = document.querySelector('.section-title');
+            const originalText = title.textContent;
+            const scramble = new TextScramble(title);
+            title.addEventListener('mouseenter', () => {
+                scramble.setText(originalText);
+            });
+            
+            // Form elements animations
+            formElements.forEach((element, index) => {
+                anime({
+                    targets: element,
+                    translateY: [50, 0],
+                    opacity: [0, 1],
+                    easing: 'easeOutExpo',
+                    duration: 1000,
+                    delay: 300 + (index * 150)
+                });
+            });
+            
+            // Button animations
+            anime({
+                targets: '.form-submit',
+                scale: [0.9, 1],
+                opacity: [0, 1],
+                easing: 'easeOutElastic(1, .8)',
+                duration: 1000,
+                delay: 1000
+            });
+            
+            // Console screen effects
+            anime({
+                targets: '.console-screen',
+                boxShadow: [
+                    'inset 0 0 5px rgba(0, 0, 0, 0.1)',
+                    'inset 0 0 20px var(--console-glow)',
+                    'inset 0 0 5px rgba(0, 0, 0, 0.1)'
+                ],
+                duration: 3000,
+                loop: true,
+                direction: 'alternate',
+                easing: 'easeInOutSine'
+            });
+            
+            // Theme button pulse effect
+            anime({
+                targets: '.theme-btn',
+                scale: [1, 1.1, 1],
+                duration: 2000,
+                loop: true,
+                easing: 'easeInOutSine'
+            });
+            
+            // Create particle animation for theme changes
+            function createThemeChangeAnimation() {
+                // Create particles container if it doesn't exist
+                let particlesContainer = document.querySelector('.theme-particles');
+                if (!particlesContainer) {
+                    particlesContainer = document.createElement('div');
+                    particlesContainer.className = 'theme-particles';
+                    particlesContainer.style.cssText = `
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        pointer-events: none;
+                        z-index: 2000;
+                    `;
+                    document.body.appendChild(particlesContainer);
+                }
+                
+                // Clear existing particles
+                particlesContainer.innerHTML = '';
+                
+                // Create new particles
+                for (let i = 0; i < 30; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'theme-particle';
+                    particle.style.cssText = `
+                        position: absolute;
+                        width: ${Math.random() * 10 + 5}px;
+                        height: ${Math.random() * 10 + 5}px;
+                        background: var(--border-color);
+                        border-radius: 50%;
+                        top: ${Math.random() * 100}%;
+                        left: ${Math.random() * 100}%;
+                        opacity: 0;
+                    `;
+                    particlesContainer.appendChild(particle);
+                    
+                    // Animate each particle
+                    anime({
+                        targets: particle,
+                        translateX: anime.random(-100, 100),
+                        translateY: anime.random(-100, 100),
+                        scale: [0, 1, 0],
+                        opacity: [0, 0.8, 0],
+                        easing: 'easeOutExpo',
+                        duration: anime.random(1000, 1500),
+                        complete: function() {
+                            particle.remove();
+                        }
+                    });
+                }
+                
+                // Flash effect on theme change
+                const flash = document.createElement('div');
+                flash.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: var(--text-color);
+                    opacity: 0;
+                    pointer-events: none;
+                    z-index: 1999;
+                `;
+                document.body.appendChild(flash);
+                
+                anime({
+                    targets: flash,
+                    opacity: [0, 0.1, 0],
+                    duration: 1000,
+                    easing: 'easeOutExpo',
+                    complete: function() {
+                        flash.remove();
+                    }
+                });
+            }
+            
+            // Form input animations
+            const formInputs = document.querySelectorAll('.form-control');
+            formInputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    anime({
+                        targets: this,
+                        scale: 1.02,
+                        boxShadow: '0 0 10px var(--console-glow)',
+                        duration: 300,
+                        easing: 'easeOutQuad'
+                    });
+                });
+                
+                input.addEventListener('blur', function() {
+                    anime({
+                        targets: this,
+                        scale: 1,
+                        boxShadow: '0 0 0 transparent',
+                        duration: 300,
+                        easing: 'easeOutQuad'
+                    });
+                });
+            });
+            
+            // Submit button animation
+            const submitBtn = document.querySelector('.form-submit');
+            if (submitBtn) {
+                submitBtn.addEventListener('mouseenter', function() {
+                    anime({
+                        targets: this,
+                        scale: 1.05,
+                        translateY: -5,
+                        boxShadow: '0 10px 20px var(--console-glow)',
+                        duration: 300,
+                        easing: 'easeOutElastic(1, .8)'
+                    });
+                });
+                
+                submitBtn.addEventListener('mouseleave', function() {
+                    anime({
+                        targets: this,
+                        scale: 1,
+                        translateY: 0,
+                        boxShadow: '0 0 0 transparent',
+                        duration: 300,
+                        easing: 'easeOutElastic(1, .8)'
+                    });
+                });
+                
+                submitBtn.addEventListener('click', function(e) {
+                    if (!e.target.classList.contains('sending')) {
+                        anime({
+                            targets: this,
+                            scale: [1, 0.95, 1],
+                            duration: 400,
+                            easing: 'easeInOutQuad'
+                        });
+                    }
+                });
+            }
+            
+            // Page transition animations
+            const navLinks = document.querySelectorAll('a[href]:not([href^="#"])');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && !href.startsWith('#') && !href.startsWith('http')) {
+                        e.preventDefault();
+                        
+                        // Create transition element if it doesn't exist
+                        let transition = document.querySelector('.page-transition');
+                        if (!transition) {
+                            transition = document.createElement('div');
+                            transition.className = 'page-transition';
+                            document.body.appendChild(transition);
+                        }
+                        
+                        // Animate transition
+                        anime.timeline({
+                            easing: 'easeInOutExpo'
+                        })
+                        .add({
+                            targets: transition,
+                            scaleX: [0, 1],
+                            transformOrigin: ['right', 'left'],
+                            duration: 600,
+                            begin: function() {
+                                transition.style.display = 'block';
+                            }
+                        })
+                        .add({
+                            targets: transition,
+                            scaleX: [1, 0],
+                            transformOrigin: ['left', 'right'],
+                            duration: 600,
+                            offset: '+=100',
+                            complete: function() {
+                                window.location.href = href;
+                            }
+                        });
+                    }
+                });
+            });
+
+            // Scroll-triggered animation
+            (function() {
+                const animContainer = document.querySelector('.scroll-animation-container');
+                const retroIcon = document.querySelector('.retro-icon');
+                const sectionIndicator = document.querySelector('.section-indicator');
+                const animToggle = document.querySelector('.animation-toggle');
+                
+                // Check for user preference
+                let animationsEnabled = localStorage.getItem('scrollAnimationsEnabled');
+                if (animationsEnabled === null) {
+                    // Default to enabled if not set
+                    animationsEnabled = true;
+                    localStorage.setItem('scrollAnimationsEnabled', 'true');
+                } else {
+                    animationsEnabled = animationsEnabled === 'true';
+                }
+                
+                // Apply initial state
+                if (!animationsEnabled) {
+                    animToggle.classList.add('disabled');
+                }
+                
+                // Toggle animation setting
+                animToggle.addEventListener('click', function() {
+                    animationsEnabled = !animationsEnabled;
+                    localStorage.setItem('scrollAnimationsEnabled', String(animationsEnabled));
+                    
+                    if (!animationsEnabled) {
+                        animToggle.classList.add('disabled');
+                        animContainer.style.opacity = '0';
+                    } else {
+                        animToggle.classList.remove('disabled');
+                    }
+                });
+                
+                // Define sections and their corresponding indicator text
+                const sections = [
+                    { id: 'intro', text: 'CONTACT', threshold: 0.1 },
+                    { id: 'form', text: 'FORM', threshold: 0.4 },
+                    { id: 'socials', text: 'SOCIALS', threshold: 0.7 }
+                ];
+                
+                let currentSection = 0;
+                let isAnimating = false;
+                let fragments = [];
+                let miniPacmans = [];
+                const fragmentCount = 10; // Reduced from 15
+                const pacmanCount = 2; // Reduced from 3
+                
+                // Generate pixel fragments
+                function generateFragments() {
+                    // Clear existing fragments
+                    fragments.forEach(fragment => fragment.remove());
+                    fragments = [];
+                    
+                    // Create new fragments (reduced count)
+                    for (let i = 0; i < fragmentCount; i++) {
+                        const fragment = document.createElement('div');
+                        fragment.className = 'pixel-fragment';
+                        const size = Math.random() * 6 + 3; // Smaller size
+                        fragment.style.width = `${size}px`;
+                        fragment.style.height = `${size}px`;
+                        
+                        // Initial position (centered)
+                        fragment.style.top = '50%';
+                        fragment.style.left = '50%';
+                        fragment.style.transform = 'translate(-50%, -50%)';
+                        
+                        animContainer.appendChild(fragment);
+                        fragments.push(fragment);
+                    }
+                }
+                
+                // Generate mini pacmans
+                function generateMiniPacmans() {
+                    // Clear existing pacmans
+                    miniPacmans.forEach(pacman => pacman.remove());
+                    miniPacmans = [];
+                    
+                    // Create new pacmans (reduced count)
+                    for (let i = 0; i < pacmanCount; i++) {
+                        const pacman = document.createElement('div');
+                        pacman.className = 'mini-pacman';
+                        
+                        // Random position around the center
+                        pacman.style.top = '50%';
+                        pacman.style.left = '50%';
+                        pacman.style.transform = 'translate(-50%, -50%)';
+                        
+                        animContainer.appendChild(pacman);
+                        miniPacmans.push(pacman);
+                    }
+                }
+                
+                // Shatter animation
+                function shatterAnimation() {
+                    isAnimating = true;
+                    
+                    // Hide the main icon
+                    anime({
+                        targets: retroIcon,
+                        opacity: 0,
+                        scale: 0.8,
+                        duration: 300,
+                        easing: 'easeInQuad'
+                    });
+                    
+                    // Animate each fragment flying away
+                    anime({
+                        targets: fragments,
+                        translateX: () => anime.random(-80, 80), // Reduced range
+                        translateY: () => anime.random(-80, 80), // Reduced range
+                        rotate: () => anime.random(-180, 180), // Reduced rotation
+                        opacity: [0, 0.6, 0], // Reduced opacity
+                        scale: [0, 0.8, 0], // Reduced scale
+                        duration: () => anime.random(400, 800), // Faster animation
+                        delay: anime.stagger(8), // Faster stagger
+                        easing: 'easeOutExpo',
+                        complete: function() {
+                            // Update section indicator
+                            sectionIndicator.textContent = sections[currentSection].text;
+                            
+                            // Reassemble animation after a short delay
+                            setTimeout(reassembleAnimation, 200);
+                        }
+                    });
+                    
+                    // Animate pacmans to chase fragments
+                    anime({
+                        targets: miniPacmans,
+                        translateX: () => anime.random(-60, 60), // Reduced range
+                        translateY: () => anime.random(-60, 60), // Reduced range
+                        opacity: [0, 0.5, 0], // Reduced opacity
+                        duration: () => anime.random(600, 900), // Faster animation
+                        delay: anime.stagger(80),
+                        easing: 'easeOutCubic'
+                    });
+                }
+                
+                // Reassemble animation
+                function reassembleAnimation() {
+                    // Show the section indicator
+                    anime({
+                        targets: sectionIndicator,
+                        opacity: 1,
+                        duration: 300,
+                        easing: 'easeOutQuad'
+                    });
+                    
+                    // Move fragments back to center
+                    anime({
+                        targets: fragments,
+                        translateX: 0,
+                        translateY: 0,
+                        rotate: 0,
+                        opacity: [0, 0.8, 0],
+                        scale: [0, 1, 0],
+                        duration: () => anime.random(500, 800),
+                        delay: anime.stagger(10),
+                        easing: 'easeOutExpo',
+                        complete: function() {
+                            // Hide the section indicator
+                            anime({
+                                targets: sectionIndicator,
+                                opacity: 0,
+                                duration: 300,
+                                easing: 'easeOutQuad',
+                                complete: function() {
+                                    // Update retro icon shape based on current section
+                                    retroIcon.setAttribute('data-section', sections[currentSection].text);
+                                    
+                                    // Show the main icon again
+                                    anime({
+                                        targets: retroIcon,
+                                        opacity: 1,
+                                        scale: 1,
+                                        duration: 300,
+                                        easing: 'easeOutQuad',
+                                        complete: function() {
+                                            isAnimating = false;
+                                        }
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }
+                
+                // Initialize fragments and pacmans
+                generateFragments();
+                generateMiniPacmans();
+                
+                // Set initial section
+                retroIcon.setAttribute('data-section', sections[currentSection].text);
+                
+                // Set up scroll monitoring
+                let lastScrollY = window.scrollY;
+                let scrollTimer;
+                let scrollThreshold = 150; // Increased minimum scroll distance to trigger animation
+                let scrollTimeout = null; // For debouncing
+                
+                function handleScroll() {
+                    // Skip all animation if disabled
+                    if (!animationsEnabled) return;
+                    
+                    // Calculate scroll distance
+                    const scrollDistance = Math.abs(window.scrollY - lastScrollY);
+                    lastScrollY = window.scrollY;
+                    
+                    // Get scroll progress percentage
+                    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const scrollProgress = window.scrollY / scrollHeight;
+                    
+                    // Determine current section based on scroll progress
+                    let newSection = 0;
+                    for (let i = sections.length - 1; i >= 0; i--) {
+                        if (scrollProgress >= sections[i].threshold) {
+                            newSection = i;
+                            break;
+                        }
+                    }
+                    
+                    // Trigger animation if section changed and not currently animating and significant scroll detected
+                    if (newSection !== currentSection && !isAnimating && scrollDistance > scrollThreshold) {
+                        // Only show animation container when actually animating
+                        animContainer.style.opacity = '0.7'; // Reduced opacity
+                        
+                        currentSection = newSection;
+                        shatterAnimation();
+                        
+                        // Apply different color based on section
+                        const colors = [
+                            { bg: 'var(--heading-color)', inner: 'var(--bg-color)' },
+                            { bg: 'var(--border-color)', inner: 'var(--accent-bg)' },
+                            { bg: 'var(--text-color)', inner: 'var(--hover-bg)' }
+                        ];
+                        
+                        // Update fragment colors to match current section
+                        fragments.forEach(fragment => {
+                            fragment.style.backgroundColor = colors[currentSection % colors.length].bg;
+                        });
+                        
+                        // Hide animation container after animation completes
+                        scrollTimer = setTimeout(() => {
+                            animContainer.style.opacity = '0';
+                        }, 2000);
+                    }
+                }
+                
+                // Performance optimization: Use requestAnimationFrame and debounce
+                function optimizedScrollHandler() {
+                    if (scrollTimeout) {
+                        return;
+                    }
+                    
+                    scrollTimeout = setTimeout(() => {
+                        window.requestAnimationFrame(function() {
+                            handleScroll();
+                            scrollTimeout = null;
+                        });
+                    }, 10); // Small timeout to debounce without making it feel laggy
+                }
+                
+                window.addEventListener('scroll', optimizedScrollHandler, { passive: true });
+                
+                // Resize handler for responsive adjustments
+                function handleResize() {
+                    // Adjust animation container size based on viewport
+                    const size = Math.min(window.innerWidth, window.innerHeight) * 0.12; // Reduced size
+                    animContainer.style.width = `${size}px`;
+                    animContainer.style.height = `${size}px`;
+                    
+                    // Recalculate scroll thresholds based on page sections
+                    const pageHeight = document.documentElement.scrollHeight;
+                    const viewportHeight = window.innerHeight;
+                    
+                    // Adjust fragments based on new size
+                    generateFragments();
+                    generateMiniPacmans();
+                }
+                
+                // Initial resize call
+                handleResize();
+                
+                // Set up resize listener with debounce
+                let resizeTimeout;
+                window.addEventListener('resize', function() {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(handleResize, 100);
+                }, { passive: true });
+                
+                // Clean up function for performance
+                function cleanup() {
+                    window.removeEventListener('scroll', optimizedScrollHandler);
+                    window.removeEventListener('resize', handleResize);
+                    clearTimeout(scrollTimer);
+                    clearTimeout(resizeTimeout);
+                }
+                
+                // Clean up on page unload
+                window.addEventListener('unload', cleanup);
+            })();
+        });
+    </script>
+</body>
+</html> 
