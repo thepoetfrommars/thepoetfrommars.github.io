@@ -7,9 +7,31 @@
     <title>RD | The Poet From Mars</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
+
+    <!-- 3D Background -->
+    <div id="canvas-container"></div>
+
+    <!-- Hidden Terminal -->
+    <div id="terminal-overlay">
+        <div class="terminal-content">
+            <div class="terminal-header">
+                <span>TERMINAL_ACCESS_V2.0</span>
+                <span class="terminal-close">[X]</span>
+            </div>
+            <div id="terminal-output">
+                <p>Welcome to RD_OS Terminal.</p>
+                <p>Type 'help' for available commands.</p>
+            </div>
+            <div class="terminal-input-line">
+                <span class="prompt">user@rd_os:~$</span>
+                <input type="text" id="terminal-input" autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
