@@ -1,70 +1,83 @@
 /* 
- * Premium Glassmorphism Logic
+ * Da Vinci Hardware Logic
  * Author: Antigravity
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize animations
+    initGeometricBackground();
     initScrollAnimations();
-    initNavbarEffect();
     initTypingEffect();
-    
-    // Add background orbs if they don't exist in HTML
-    if (!document.querySelector('.bg-animation')) {
-        createBackground();
-    }
 });
 
-function createBackground() {
-    const bg = document.createElement('div');
-    bg.className = 'bg-animation';
-    bg.innerHTML = `
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
+function initGeometricBackground() {
+    const container = document.createElement('div');
+    container.className = 'geo-background';
+    container.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+        overflow: hidden;
     `;
-    document.body.prepend(bg);
-}
+    document.body.prepend(container);
 
-function initNavbarEffect() {
-    const navbar = document.querySelector('.navbar');
-    if (!navbar) return;
+    // Create rotating circles (Da Vinci style)
+    for (let i = 0; i < 3; i++) {
+        const circle = document.createElement('div');
+        circle.className = 'geo-circle';
+        const size = 300 + (i * 150);
+        circle.style.cssText = `
+            width: ${size}px;
+            height: ${size}px;
+            border: 1px dashed rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate ${60 + (i * 20)}s linear infinite ${i % 2 === 0 ? '' : 'reverse'};
+        `;
+        container.appendChild(circle);
+    }
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+    // Add CSS for rotation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
         }
-    });
+    `;
+    document.head.appendChild(style);
 }
 
 function initScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-                observer.unobserve(entry.target);
+                entry.target.classList.add('visible');
+                // Add drawing effect if it's a card
+                if (entry.target.classList.contains('blueprint-card')) {
+                    drawBorder(entry.target);
+                }
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.glass-card, .section-header, .timeline-item').forEach(el => {
+    document.querySelectorAll('.blueprint-card, h2, p').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        el.style.transition = 'all 0.6s ease-out';
         observer.observe(el);
     });
 
-    // Add class for animation
+    // CSS for visible state
     const style = document.createElement('style');
     style.textContent = `
-        .animate-in {
+        .visible {
             opacity: 1 !important;
             transform: translateY(0) !important;
         }
@@ -72,22 +85,29 @@ function initScrollAnimations() {
     document.head.appendChild(style);
 }
 
+function drawBorder(element) {
+    // Simulate hand-drawing effect
+    element.style.borderColor = 'transparent';
+    setTimeout(() => {
+        element.style.transition = 'border-color 1s ease';
+        element.style.borderColor = 'var(--line-dim)';
+    }, 100);
+}
+
 function initTypingEffect() {
     const heroText = document.querySelector('.hero-typing');
     if (!heroText) return;
-    
-    const text = heroText.getAttribute('data-text') || heroText.innerText;
+
+    const text = heroText.getAttribute('data-text') || "Visionary Rebel Architect";
     heroText.innerText = '';
-    
+
     let i = 0;
     function type() {
         if (i < text.length) {
             heroText.innerText += text.charAt(i);
             i++;
-            setTimeout(type, 50); // Typing speed
+            setTimeout(type, 80);
         }
     }
-    
-    // Start after a small delay
     setTimeout(type, 500);
 }

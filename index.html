@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranojoy Dutta - Portfolio</title>
+    <title>RD | The Poet From Mars</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo">RD.</a>
+            <a href="index.html" class="logo">RD_22</a>
             <div class="nav-links">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="experience.html" class="nav-link">Experience</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="index.html" class="nav-link active">Identity</a>
+                <a href="experience.html" class="nav-link">Work</a>
+                <a href="systems.html" class="nav-link">Systems</a>
+                <a href="future.html" class="nav-link">Future</a>
             </div>
         </div>
     </nav>
@@ -25,38 +27,65 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
-            <h1>Hello, I'm <span class="hero-typing" data-text="Ranojoy Dutta"></span></h1>
-            <p>A passionate developer crafting digital experiences with code and creativity.</p>
-            <div class="hero-buttons">
-                <a href="projects.html" class="btn btn-primary">View Work</a>
-                <a href="contact.html" class="btn btn-outline">Contact Me</a>
+            <span class="hand-note" style="position: absolute; top: 20%; right: 20%;">The Poet From Mars</span>
+            <h1>RD <span style="color: var(--line-gold);">//</span> 1998</h1>
+            <span class="hero-subtitle hero-typing" data-text="Visionary Rebel Architect"></span>
+
+            <div style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center;">
+                <a href="experience.html" class="btn btn-gold">View Schematics</a>
+                <a href="systems.html" class="btn">Operating System</a>
             </div>
         </div>
     </section>
 
-    <!-- About / Skills Preview -->
-    <section class="about-preview">
+    <!-- Identity Matrix -->
+    <section class="identity">
         <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">What I Do</span>
-                <h2 class="section-title">Expertise</h2>
+            <div class="section-header" style="margin-bottom: 3rem;">
+                <h2 style="border-bottom: 1px solid var(--line-gold); display: inline-block; padding-bottom: 0.5rem;">
+                    Identity Matrix</h2>
             </div>
-            
-            <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div class="glass-card">
-                    <i class="fas fa-code fa-2x" style="color: var(--primary); margin-bottom: 1rem;"></i>
-                    <h3>Frontend Dev</h3>
-                    <p style="color: var(--text-muted);">Building responsive, interactive, and accessible user interfaces with modern frameworks.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <!-- Core Profile -->
+                <div class="blueprint-card">
+                    <h3 style="color: var(--line-gold); margin-bottom: 1rem;">[01] Core Profile</h3>
+                    <p>Quant Strategist in linear rates at a top global investment bank. Sitting at the intersection of
+                        mathematics, markets, and code.</p>
+                    <br>
+                    <p class="hand-note" style="font-size: 1.2rem;">"I think in systems."</p>
                 </div>
-                <div class="glass-card">
-                    <i class="fas fa-server fa-2x" style="color: var(--secondary); margin-bottom: 1rem;"></i>
-                    <h3>Backend Dev</h3>
-                    <p style="color: var(--text-muted);">Creating robust APIs and server-side logic to power complex applications.</p>
+
+                <!-- Frameworks -->
+                <div class="blueprint-card">
+                    <h3 style="color: var(--line-gold); margin-bottom: 1rem;">[02] Frameworks</h3>
+                    <ul style="list-style: none; padding-left: 1rem; border-left: 2px solid var(--line-dim);">
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Numerology 22</strong><br>
+                            <span style="color: var(--text-dim);">Master Builder. Large, structured, long-term
+                                projects.</span>
+                        </li>
+                        <li>
+                            <strong>Saturn-Heavy</strong><br>
+                            <span style="color: var(--text-dim);">Discipline, delayed gratification, long games.</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="glass-card">
-                    <i class="fas fa-paint-brush fa-2x" style="color: var(--accent); margin-bottom: 1rem;"></i>
-                    <h3>UI/UX Design</h3>
-                    <p style="color: var(--text-muted);">Designing intuitive and beautiful experiences that users love.</p>
+
+                <!-- Values -->
+                <div class="blueprint-card">
+                    <h3 style="color: var(--line-gold); margin-bottom: 1rem;">[03] Key Values</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span
+                            style="border: 1px solid var(--line-dim); padding: 0.2rem 0.5rem; font-size: 0.8rem;">Autonomy</span>
+                        <span
+                            style="border: 1px solid var(--line-dim); padding: 0.2rem 0.5rem; font-size: 0.8rem;">Technical
+                            Depth</span>
+                        <span
+                            style="border: 1px solid var(--line-dim); padding: 0.2rem 0.5rem; font-size: 0.8rem;">Leverage</span>
+                        <span
+                            style="border: 1px solid var(--line-dim); padding: 0.2rem 0.5rem; font-size: 0.8rem;">Impact</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,4 +93,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

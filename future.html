@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RD | Future</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">RD_22</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Identity</a>
+                <a href="experience.html" class="nav-link">Work</a>
+                <a href="systems.html" class="nav-link">Systems</a>
+                <a href="future.html" class="nav-link active">Future</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h2 style="border-bottom: 1px solid var(--line-gold); display: inline-block; padding-bottom: 0.5rem;">
+                Roadmap: AI x Quant</h2>
+            <p class="hand-note" style="margin-left: 2rem;">"Compressing feedback loops."</p>
+        </div>
+    </section>
+
+    <section class="future-content">
+        <div class="container">
+
+            <div class="blueprint-card" style="margin-bottom: 3rem;">
+                <h3 style="color: var(--line-accent);">The Convergence</h3>
+                <p style="margin-top: 1rem; max-width: 800px;">
+                    Moving toward the intersection of Large Language Models and Quantitative Finance. Using agents to
+                    accelerate model development, debugging, and documentation.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+                <!-- RAG Microservices -->
+                <div class="blueprint-card">
+                    <h4 style="color: var(--line-gold);">[Target 01] RAG Microservices</h4>
+                    <p style="color: var(--text-dim); margin-top: 0.5rem;">Building internal tools for finance documents
+                        and code search using embeddings and vector databases.</p>
+                    <div style="margin-top: 1rem; border-top: 1px dashed var(--line-dim); padding-top: 1rem;">
+                        <span
+                            style="font-size: 0.8rem; border: 1px solid var(--line-dim); padding: 0.2rem;">FastAPI</span>
+                        <span style="font-size: 0.8rem; border: 1px solid var(--line-dim); padding: 0.2rem;">Vector
+                            DB</span>
+                    </div>
+                </div>
+
+                <!-- Agentic Workflows -->
+                <div class="blueprint-card">
+                    <h4 style="color: var(--line-gold);">[Target 02] Agentic Workflows</h4>
+                    <p style="color: var(--text-dim); margin-top: 0.5rem;">Automating the "Learn → Deconstruct →
+                        Rebuild" pipeline. Using AI to handle edge cases in linear rates.</p>
+                    <div style="margin-top: 1rem; border-top: 1px dashed var(--line-dim); padding-top: 1rem;">
+                        <span
+                            style="font-size: 0.8rem; border: 1px solid var(--line-dim); padding: 0.2rem;">LangChain</span>
+                        <span
+                            style="font-size: 0.8rem; border: 1px solid var(--line-dim); padding: 0.2rem;">AutoGPT</span>
+                    </div>
+                </div>
+
+                <!-- Side Projects -->
+                <div class="blueprint-card">
+                    <h4 style="color: var(--line-gold);">[Target 03] Side Ventures</h4>
+                    <ul style="list-style: none; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-dim);">
+                        <li style="margin-bottom: 0.5rem;">> Tutoring Junior Quants</li>
+                        <li style="margin-bottom: 0.5rem;">> Content Creation (Quant/Systems)</li>
+                        <li style="margin-bottom: 0.5rem;">> Generative Visuals (Sci-Fi/Astrology)</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

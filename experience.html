@@ -4,81 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranojoy Dutta - Experience</title>
+    <title>RD | Work</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo">RD.</a>
+            <a href="index.html" class="logo">RD_22</a>
             <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="experience.html" class="nav-link active">Experience</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="index.html" class="nav-link">Identity</a>
+                <a href="experience.html" class="nav-link active">Work</a>
+                <a href="systems.html" class="nav-link">Systems</a>
+                <a href="future.html" class="nav-link">Future</a>
             </div>
         </div>
     </nav>
 
     <section class="page-header">
-        <div class="container section-header">
-            <span class="section-subtitle">My Journey</span>
-            <h2 class="section-title">Experience</h2>
+        <div class="container">
+            <h2 style="border-bottom: 1px solid var(--line-gold); display: inline-block; padding-bottom: 0.5rem;">
+                Professional Schematics</h2>
+            <p class="hand-note" style="margin-left: 2rem;">"Rigorous models, clean abstractions."</p>
         </div>
     </section>
 
-    <section class="timeline-section">
+    <section class="work-content">
         <div class="container">
-            <div class="timeline" style="position: relative; max-width: 800px; margin: 0 auto;">
-                <!-- Timeline Line -->
-                <div style="position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: var(--border);">
+            <!-- Current Role -->
+            <div class="blueprint-card" style="margin-bottom: 3rem;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+                    <div>
+                        <h3 style="color: var(--line-gold);">Quant Strategist // Linear Rates</h3>
+                        <h4 style="color: var(--text-dim);">Morgan Stanley</h4>
+                    </div>
+                    <span style="border: 1px solid var(--line-primary); padding: 0.2rem 0.5rem;">Current</span>
                 </div>
 
-                <!-- Experience Item 1 -->
-                <div class="timeline-item" style="padding-left: 50px; margin-bottom: 3rem; position: relative;">
-                    <div
-                        style="position: absolute; left: 11px; top: 0; width: 20px; height: 20px; background: var(--primary); border-radius: 50%; border: 4px solid var(--background);">
+                <div
+                    style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h5 style="color: var(--line-accent);">Domain Focus</h5>
+                        <ul style="list-style: none; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-dim);">
+                            <li>> Government Bonds, Forwards, Repos</li>
+                            <li>> TRS & Cross-Currency Swaps</li>
+                            <li>> Risk (PV01, VaR, ISDA SIMM)</li>
+                        </ul>
                     </div>
-                    <div class="glass-card">
-                        <span style="color: var(--primary); font-weight: 600; font-size: 0.9rem;">2023 - Present</span>
-                        <h3 style="margin: 0.5rem 0;">Senior Frontend Developer</h3>
-                        <h4 style="color: var(--text-muted); font-size: 1rem; margin-bottom: 1rem;">Tech Corp Inc.</h4>
-                        <p style="color: var(--text-muted);">Leading the frontend team in building scalable web
-                            applications using React and TypeScript. Improved performance by 40%.</p>
+                    <div>
+                        <h5 style="color: var(--line-accent);">Key Operations</h5>
+                        <ul style="list-style: none; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-dim);">
+                            <li>> Validating pricing/risk libraries</li>
+                            <li>> Empirical checks & PnL attribution</li>
+                            <li>> Supporting desks with precise analytics</li>
+                        </ul>
                     </div>
+                </div>
+            </div>
+
+            <!-- Skill Stack -->
+            <h3 style="margin-bottom: 1.5rem;">Technical Stack</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+
+                <div class="blueprint-card">
+                    <h4 style="color: var(--line-gold);">Math</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Probability, Linear Algebra, Stochastic
+                        Calculus, Robust Statistics (MAD).</p>
                 </div>
 
-                <!-- Experience Item 2 -->
-                <div class="timeline-item" style="padding-left: 50px; margin-bottom: 3rem; position: relative;">
-                    <div
-                        style="position: absolute; left: 11px; top: 0; width: 20px; height: 20px; background: var(--secondary); border-radius: 50%; border: 4px solid var(--background);">
-                    </div>
-                    <div class="glass-card">
-                        <span style="color: var(--secondary); font-weight: 600; font-size: 0.9rem;">2021 - 2023</span>
-                        <h3 style="margin: 0.5rem 0;">Web Developer</h3>
-                        <h4 style="color: var(--text-muted); font-size: 1rem; margin-bottom: 1rem;">Digital Agency</h4>
-                        <p style="color: var(--text-muted);">Developed responsive websites for diverse clients.
-                            Collaborated with designers to implement pixel-perfect UIs.</p>
-                    </div>
+                <div class="blueprint-card">
+                    <h4 style="color: var(--line-gold);">Code</h4>
+                    <ul style="list-style: none; font-size: 0.9rem; color: var(--text-dim);">
+                        <li>Python (Analytics/Tooling)</li>
+                        <li>Scala (Internal Frameworks)</li>
+                        <li>C++ (Performance)</li>
+                    </ul>
                 </div>
 
-                <!-- Experience Item 3 -->
-                <div class="timeline-item" style="padding-left: 50px; margin-bottom: 3rem; position: relative;">
-                    <div
-                        style="position: absolute; left: 11px; top: 0; width: 20px; height: 20px; background: var(--accent); border-radius: 50%; border: 4px solid var(--background);">
-                    </div>
-                    <div class="glass-card">
-                        <span style="color: var(--accent); font-weight: 600; font-size: 0.9rem;">2019 - 2021</span>
-                        <h3 style="margin: 0.5rem 0;">Junior Developer</h3>
-                        <h4 style="color: var(--text-muted); font-size: 1rem; margin-bottom: 1rem;">Startup Hub</h4>
-                        <p style="color: var(--text-muted);">Assisted in full-stack development using Node.js and
-                            Vue.js. Learned agile methodologies and version control.</p>
-                    </div>
+                <div class="blueprint-card">
+                    <h4 style="color: var(--line-gold);">AI / Tooling</h4>
+                    <ul style="list-style: none; font-size: 0.9rem; color: var(--text-dim);">
+                        <li>LLM Copilots (Claude, GPT-5)</li>
+                        <li>RAG Microservices</li>
+                        <li>Agentic Workflows</li>
+                    </ul>
                 </div>
+
             </div>
         </div>
     </section>
