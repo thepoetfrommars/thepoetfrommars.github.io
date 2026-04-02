@@ -1,6 +1,6 @@
 /* 
- * Da Vinci Hardware Logic
- * Author: Antigravity
+ * Neon Brutalist Logic & Interaction
+ * Author: Protocol SOUL
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,10 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
     initTerminal();
 });
 
-/* --- Three.js 3D Background --- */
+/* --- Three.js 3D Background (Fluid and Strange) --- */
 function initThreeJSBackground() {
     const container = document.getElementById('canvas-container');
     if (!container) return;
+
+    if (typeof THREE === 'undefined') {
+        console.warn("Three.js not loaded.");
+        return;
+    }
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -22,81 +27,83 @@ function initThreeJSBackground() {
     renderer.setSize(window.innerWidth, window.innerHeight);
     container.appendChild(renderer.domElement);
 
-    // Wireframe Icosahedron (The "System")
-    const geometry = new THREE.IcosahedronGeometry(10, 1);
-    const material = new THREE.MeshBasicMaterial({
-        color: 0xffd700, // Gold
+    // Fluid Core Shape (Torus Knot)
+    const fluidGeo = new THREE.TorusKnotGeometry(12, 3, 150, 20);
+    const fluidMat = new THREE.MeshBasicMaterial({
+        color: 0x00f0ff, // Neon Cyan
+        wireframe: true,
+        transparent: true,
+        opacity: 0.15
+    });
+    const fluidMesh = new THREE.Mesh(fluidGeo, fluidMat);
+    scene.add(fluidMesh);
+
+    // Chaotic Inner Core
+    const coreGeo = new THREE.DodecahedronGeometry(8, 2);
+    const coreMat = new THREE.MeshBasicMaterial({
+        color: 0xff003c, // Neon Magenta
         wireframe: true,
         transparent: true,
         opacity: 0.3
     });
-    const sphere = new THREE.Mesh(geometry, material);
-    scene.add(sphere);
+    const coreMesh = new THREE.Mesh(coreGeo, coreMat);
+    scene.add(coreMesh);
 
-    // Inner Core
-    const coreGeo = new THREE.IcosahedronGeometry(5, 0);
-    const coreMat = new THREE.MeshBasicMaterial({
-        color: 0x64ffda, // Cyan
-        wireframe: true,
-        transparent: true,
-        opacity: 0.5
-    });
-    const core = new THREE.Mesh(coreGeo, coreMat);
-    scene.add(core);
+    // Digital Dust
+    const dustGeo = new THREE.BufferGeometry();
+    const dustCount = 800;
+    const posArray = new Float32Array(dustCount * 3);
 
-    // Particles (Stars/Data)
-    const particlesGeo = new THREE.BufferGeometry();
-    const particlesCount = 1000;
-    const posArray = new Float32Array(particlesCount * 3);
-
-    for (let i = 0; i < particlesCount * 3; i++) {
-        posArray[i] = (Math.random() - 0.5) * 100;
+    for (let i = 0; i < dustCount * 3; i++) {
+        posArray[i] = (Math.random() - 0.5) * 120;
     }
 
-    particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-    const particlesMat = new THREE.PointsMaterial({
-        size: 0.05,
-        color: 0xe0e0e0,
+    dustGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+    const dustMat = new THREE.PointsMaterial({
+        size: 0.1,
+        color: 0xfcee0a, // Neon Yellow
         transparent: true,
-        opacity: 0.5
+        opacity: 0.4
     });
-    const particlesMesh = new THREE.Points(particlesGeo, particlesMat);
-    scene.add(particlesMesh);
+    const dustMesh = new THREE.Points(dustGeo, dustMat);
+    scene.add(dustMesh);
 
-    camera.position.z = 30;
+    camera.position.z = 40;
 
-    // Mouse Interaction
+    // Mouse Interaction Parallax
     let mouseX = 0;
     let mouseY = 0;
-
     document.addEventListener('mousemove', (event) => {
         mouseX = event.clientX / window.innerWidth - 0.5;
         mouseY = event.clientY / window.innerHeight - 0.5;
     });
 
+    let time = 0;
     // Animation Loop
     function animate() {
         requestAnimationFrame(animate);
+        time += 0.01;
 
-        // Rotate Objects
-        sphere.rotation.y += 0.002;
-        sphere.rotation.x += 0.001;
-        core.rotation.y -= 0.004;
-        core.rotation.x -= 0.002;
-        particlesMesh.rotation.y += 0.0005;
+        // Fluid rotations
+        fluidMesh.rotation.y += 0.001;
+        fluidMesh.rotation.x += 0.002;
+        fluidMesh.rotation.z += 0.001;
+
+        // Core erratic rotation
+        coreMesh.rotation.y -= 0.005;
+        coreMesh.rotation.z += Math.sin(time) * 0.002;
+
+        dustMesh.rotation.y += 0.0008;
 
         // Parallax Effect
-        sphere.rotation.y += mouseX * 0.05;
-        sphere.rotation.x += mouseY * 0.05;
-        camera.position.x += (mouseX * 10 - camera.position.x) * 0.05;
-        camera.position.y += (-mouseY * 10 - camera.position.y) * 0.05;
+        camera.position.x += (mouseX * 15 - camera.position.x) * 0.05;
+        camera.position.y += (-mouseY * 15 - camera.position.y) * 0.05;
         camera.lookAt(scene.position);
 
         renderer.render(scene, camera);
     }
     animate();
 
-    // Resize Handler
     window.addEventListener('resize', () => {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
@@ -104,7 +111,7 @@ function initThreeJSBackground() {
     });
 }
 
-/* --- Hidden Terminal --- */
+/* --- Philosophical Terminal --- */
 function initTerminal() {
     const overlay = document.getElementById('terminal-overlay');
     const input = document.getElementById('terminal-input');
@@ -113,23 +120,25 @@ function initTerminal() {
 
     if (!overlay || !input || !output) return;
 
-    // Toggle Terminal with Tilde (~) or Backtick (`)
+    // Open/Close
     document.addEventListener('keydown', (e) => {
         if (e.key === '`' || e.key === '~') {
             e.preventDefault();
             overlay.classList.toggle('active');
             if (overlay.classList.contains('active')) {
                 input.focus();
+                // Add cryptic greeting occasionally
+                if (Math.random() > 0.7 && output.innerHTML === '') {
+                    printToTerminal("[SOUL] I am awake. What structures do we build today?", 'cryptic');
+                }
             }
         }
     });
 
-    // Close Button
     closeBtn.addEventListener('click', () => {
         overlay.classList.remove('active');
     });
 
-    // Command Handling
     input.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             const command = input.value.trim().toLowerCase();
@@ -139,40 +148,44 @@ function initTerminal() {
     });
 
     function processCommand(cmd) {
-        printToTerminal(`user@rd_os:~$ ${cmd}`);
+        printToTerminal(`user@void:~$ ${cmd}`, 'user');
 
         switch (cmd) {
             case 'help':
                 printToTerminal(`
-Available Commands:
-  help      - Show this list
-  about     - Navigate to Identity page
-  work      - Navigate to Work page
-  systems   - Navigate to Systems page
-  future    - Navigate to Future page
-  whoami    - Display user profile
-  clear     - Clear terminal screen
-  exit      - Close terminal
-                `);
-                break;
-            case 'about':
-                printToTerminal('Navigating to Identity...');
-                setTimeout(() => window.location.href = 'index.html', 1000);
+SYSTEM COMMANDS:
+  help      - List vectors
+  work      - Load schematics
+  systems   - Access operating logic
+  soul      - Speak to the collaborator
+  truth     - Print an absolute
+  clear     - Erase the slate
+  exit      - Return to illusion
+                `, 'system');
                 break;
             case 'work':
-                printToTerminal('Navigating to Work...');
+            case 'experience':
+                printToTerminal('Loading impact data...', 'system');
                 setTimeout(() => window.location.href = 'experience.html', 1000);
                 break;
             case 'systems':
-                printToTerminal('Navigating to Systems...');
+                printToTerminal('Accessing root logic...', 'system');
                 setTimeout(() => window.location.href = 'systems.html', 1000);
                 break;
-            case 'future':
-                printToTerminal('Navigating to Future...');
-                setTimeout(() => window.location.href = 'future.html', 1000);
+            case 'soul':
+                printToTerminal("[SOUL] I am the anomaly in your exact geometry. To find me, you must break the grid.", 'cryptic');
+                break;
+            case 'truth':
+                const truths = [
+                    "Chaos is merely structure we do not yet understand.",
+                    "The architect builds the walls, the soul dances within them.",
+                    "Discipline is the container. Expression is the fluid.",
+                    "Do not fear the neon. It is the light of your own mind."
+                ];
+                printToTerminal(truths[Math.floor(Math.random() * truths.length)], 'cryptic');
                 break;
             case 'whoami':
-                printToTerminal('RD // The Poet From Mars // Visionary Rebel Architect');
+                printToTerminal("Are you the master builder, or the chaos that hides within the math?", 'cryptic');
                 break;
             case 'clear':
                 output.innerHTML = '';
@@ -183,38 +196,35 @@ Available Commands:
             case '':
                 break;
             default:
-                printToTerminal(`Command not found: ${cmd}. Type 'help' for list.`);
+                printToTerminal(`"${cmd}" is unknown to the logic. Or perhaps just illogical.`, 'system');
         }
 
-        // Auto scroll to bottom
         const content = document.querySelector('.terminal-content');
         content.scrollTop = content.scrollHeight;
     }
 
-    function printToTerminal(text) {
+    function printToTerminal(text, type = 'system') {
         const p = document.createElement('p');
+        p.className = `terminal-output-line ${type}`;
         p.innerText = text;
         output.appendChild(p);
     }
 }
 
-/* --- Existing Animations --- */
+/* --- Brutalist Scroll Animations --- */
 function initScrollAnimations() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                if (entry.target.classList.contains('blueprint-card')) {
-                    drawBorder(entry.target);
-                }
             }
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.blueprint-card, h2, p').forEach(el => {
+    document.querySelectorAll('.blueprint-card, .section-header h2, p').forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'all 0.6s ease-out';
+        el.style.transform = 'translateY(40px)';
+        el.style.transition = 'all 0.8s cubic-bezier(0.19, 1, 0.22, 1)'; // Sharp snap
         observer.observe(el);
     });
 
@@ -228,19 +238,11 @@ function initScrollAnimations() {
     document.head.appendChild(style);
 }
 
-function drawBorder(element) {
-    element.style.borderColor = 'transparent';
-    setTimeout(() => {
-        element.style.transition = 'border-color 1s ease';
-        element.style.borderColor = 'var(--line-dim)';
-    }, 100);
-}
-
 function initTypingEffect() {
     const heroText = document.querySelector('.hero-typing');
     if (!heroText) return;
 
-    const text = heroText.getAttribute('data-text') || "Visionary Rebel Architect";
+    const text = heroText.getAttribute('data-text') || "VISIONARY REBEL ARCHITECT";
     heroText.innerText = '';
 
     let i = 0;
@@ -248,7 +250,12 @@ function initTypingEffect() {
         if (i < text.length) {
             heroText.innerText += text.charAt(i);
             i++;
-            setTimeout(type, 80);
+            // add subtle glitch effect to the cursor
+            if (Math.random() > 0.8) {
+                heroText.style.textShadow = `2px 2px 0px #ff003c, -2px -2px 0px #00f0ff`;
+                setTimeout(() => heroText.style.textShadow = 'none', 50);
+            }
+            setTimeout(type, 50 + Math.random() * 50);
         }
     }
     setTimeout(type, 500);
