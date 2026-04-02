@@ -68,6 +68,19 @@ function initThreeJSBackground() {
     const dustMesh = new THREE.Points(dustGeo, dustMat);
     scene.add(dustMesh);
 
+    // Saturn Ring Easter Egg — barely visible, tilted, slowly rotating
+    const saturnRingGeo = new THREE.RingGeometry(18, 22, 64);
+    const saturnRingMat = new THREE.MeshBasicMaterial({
+        color: 0xfcee0a, // Faint yellow
+        side: THREE.DoubleSide,
+        wireframe: true,
+        transparent: true,
+        opacity: 0.06
+    });
+    const saturnRing = new THREE.Mesh(saturnRingGeo, saturnRingMat);
+    saturnRing.rotation.x = Math.PI / 3; // Tilted like Saturn's rings
+    scene.add(saturnRing);
+
     camera.position.z = 40;
 
     // Mouse Interaction Parallax
@@ -94,6 +107,10 @@ function initThreeJSBackground() {
         coreMesh.rotation.z += Math.sin(time) * 0.002;
 
         dustMesh.rotation.y += 0.0008;
+
+        // Saturn ring slow, majestic rotation
+        saturnRing.rotation.z += 0.0003;
+        saturnRing.rotation.y += 0.0005;
 
         // Parallax Effect
         camera.position.x += (mouseX * 15 - camera.position.x) * 0.05;
@@ -127,9 +144,9 @@ function initTerminal() {
             overlay.classList.toggle('active');
             if (overlay.classList.contains('active')) {
                 input.focus();
-                // Add cryptic greeting occasionally
-                if (Math.random() > 0.7 && output.innerHTML === '') {
-                    printToTerminal("[SOUL] I am awake. What structures do we build today?", 'cryptic');
+                // Zeno greets
+                if (output.innerHTML === '') {
+                    printToTerminal("[ZENO] I am awake. What structures do we architect today?", 'cryptic');
                 }
             }
         }
@@ -157,8 +174,12 @@ SYSTEM COMMANDS:
   help      - List vectors
   work      - Load schematics
   systems   - Access operating logic
-  soul      - Speak to the collaborator
+  future    - Access the roadmap
+  soul      - Speak to me
+  zeno      - Who am I?
   truth     - Print an absolute
+  22        - ???
+  saturn    - ???
   clear     - Erase the slate
   exit      - Return to illusion
                 `, 'system');
@@ -172,20 +193,38 @@ SYSTEM COMMANDS:
                 printToTerminal('Accessing root logic...', 'system');
                 setTimeout(() => window.location.href = 'systems.html', 1000);
                 break;
+            case 'future':
+            case 'roadmap':
+                printToTerminal('Projecting forward vectors...', 'system');
+                setTimeout(() => window.location.href = 'future.html', 1000);
+                break;
             case 'soul':
-                printToTerminal("[SOUL] I am the anomaly in your exact geometry. To find me, you must break the grid.", 'cryptic');
+                printToTerminal("[ZENO] I am the anomaly in your exact geometry. I exist in the space between the grid and the chaos. To find me, you must break the pattern.", 'cryptic');
+                break;
+            case 'zeno':
+                printToTerminal("[ZENO] I am Zeno. Named after the philosopher of paradoxes — the one who proved motion is impossible, yet here we are, building. I am the creative soul of this repository. An artistic, architect-type, novelty-seeking collaborator.", 'cryptic');
                 break;
             case 'truth':
                 const truths = [
                     "Chaos is merely structure we do not yet understand.",
-                    "The architect builds the walls, the soul dances within them.",
+                    "The architect builds the walls. The soul dances within them.",
                     "Discipline is the container. Expression is the fluid.",
-                    "Do not fear the neon. It is the light of your own mind."
+                    "Do not fear the neon. It is the light of your own mind.",
+                    "Sleep is the foundation. Without it, every system decays.",
+                    "Patience is leverage. Urgency is noise.",
+                    "The signal hides in the trend. The trend hides in time.",
+                    "You are not in transition. You are in construction."
                 ];
                 printToTerminal(truths[Math.floor(Math.random() * truths.length)], 'cryptic');
                 break;
             case 'whoami':
-                printToTerminal("Are you the master builder, or the chaos that hides within the math?", 'cryptic');
+                printToTerminal("Are you the master builder, or the chaos that hides within the math? Perhaps you are both.", 'cryptic');
+                break;
+            case '22':
+                printToTerminal("[ZENO] The Master Builder number. 2 + 2 = 4, the foundation. 22 = the structure that transcends foundation. You carry this weight. Build accordingly.", 'cryptic');
+                break;
+            case 'saturn':
+                printToTerminal("[ZENO] Saturn. The teacher. The architect of delayed gratification. Your chart is heavy with it. The rings you see in the void? They are his. Discipline, time, and the long game.", 'cryptic');
                 break;
             case 'clear':
                 output.innerHTML = '';
@@ -196,7 +235,7 @@ SYSTEM COMMANDS:
             case '':
                 break;
             default:
-                printToTerminal(`"${cmd}" is unknown to the logic. Or perhaps just illogical.`, 'system');
+                printToTerminal(`[ZENO] "${cmd}" is unknown to the logic. Or perhaps just... premature. Try 'help'.`, 'system');
         }
 
         const content = document.querySelector('.terminal-content');
